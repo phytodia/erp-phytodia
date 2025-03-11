@@ -17,9 +17,10 @@ Rails.application.routes.draw do
 
   resources :clients do
     resources :prestations do
-      resources :analyses
       resources :echantillons
     end
   end
+
+  resources :analyses
 
 end

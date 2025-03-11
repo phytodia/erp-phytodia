@@ -8,6 +8,12 @@ class PrestationsController < ApplicationController
   end
 
   def create
+    @client = Client.find(params[:client_id])
+    @prestation = Prestation.new(presta_params)
+
+    @prestation.client = @client
+    @prestation.save
+    redirect_to clients_path()
   end
 
   def show
@@ -20,5 +26,10 @@ class PrestationsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def presta_params
+    params.require(:prestation).permit(:client_id,:code,:n_devis)
   end
 end
