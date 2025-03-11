@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  society: MyString
+  mail_contact: MyString
+  mail_resultat: MyString
+  amv: false
+
+two:
+  code: MyString
+  society: MyString
+  mail_contact: MyString
+  mail_resultat: MyString
+  amv: false
