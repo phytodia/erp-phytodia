@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :clients do
+    resources :echantillons
     resources :prestations do
-      resources :echantillons
     end
   end
 

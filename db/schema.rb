@@ -40,11 +40,11 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_11_130933) do
     t.string "code"
     t.text "description"
     t.integer "n_lot"
-    t.string "reception_date"
-    t.bigint "prestation_id", null: false
+    t.date "reception_date"
+    t.bigint "client_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["prestation_id"], name: "index_echantillons_on_prestation_id"
+    t.index ["client_id"], name: "index_echantillons_on_client_id"
   end
 
   create_table "prestations", force: :cascade do |t|
@@ -57,6 +57,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_11_130933) do
   end
 
   add_foreign_key "analyses", "echantillons"
-  add_foreign_key "echantillons", "prestations"
+  add_foreign_key "echantillons", "clients"
   add_foreign_key "prestations", "clients"
 end

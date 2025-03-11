@@ -1,2 +1,11 @@
 <h1>Echantillons#new</h1>
 <p>Find me in app/views/echantillons/new.html.erb</p>
+<%= @client.society %>
+<hr>
+<%= simple_form_for [@client,@echantillon] do |f|%>
+  <%= f.input :code,label:"code echantillon client" %>
+  <%= f.input :description %>
+  <%= f.input :n_lot %>
+  <%= f.input :reception_date %>
+  <%= f.button :submit %>
+<% end %>

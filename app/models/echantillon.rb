@@ -1,4 +1,4 @@
 class Echantillon < ApplicationRecord
-  belongs_to :prestation
+  belongs_to :client
   has_many :analyses
 end

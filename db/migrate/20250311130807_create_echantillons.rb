@@ -4,8 +4,8 @@ class CreateEchantillons < ActiveRecord::Migration[7.2]
       t.string :code
       t.text :description
       t.integer :n_lot
-      t.string :reception_date
-      t.references :prestation, null: false, foreign_key: true
+      t.date :reception_date
+      t.references :client, null: false, foreign_key: true
 
       t.timestamps
     end
