@@ -6,6 +6,7 @@
       <th>Code client</th>
       <th>Societe</th>
       <th>AMV</th>
+      <th>Nombre d'échantillons</th>
       <th>Options</th>
     </tr>
   </thead>
@@ -15,6 +16,8 @@
       <td><%= client.code %></td>
       <td><%= client.society %></td>
       <td><%= client.amv %></td>
+      <td><%= client.echantillons.size %></td>
+      <td><%= link_to "Nouvel échantillon",new_client_echantillon_path(client)%></td>
       <td><%= link_to "Nouvelle prestation",new_client_prestation_path(client)%></td>
       </tr>
     <%end %>
