@@ -3,6 +3,8 @@ class PrestationsController < ApplicationController
   end
 
   def new
+    @client = Client.find(params[:client_id])
+    @prestation = Prestation.new
   end
 
   def create

@@ -1,2 +1,5 @@
 <h1>Prestations#new</h1>
 <p>Find me in app/views/prestations/new.html.erb</p>
+<%= simple_form_for [@client,@prestation] do |f|%>
+  <%= f.button :submit %>
+<% end %>
