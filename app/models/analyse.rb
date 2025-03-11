@@ -1,0 +1,2 @@
+class Analyse < ApplicationRecord
+end

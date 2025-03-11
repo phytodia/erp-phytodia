@@ -1,0 +1,10 @@
+<h1>Clients#new</h1>
+<p>Find me in app/views/clients/new.html.erb</p>
+<%= simple_form_for @client do |f|%>
+  <%= f.input :code %>
+  <%= f.input :society %>
+  <%= f.input :mail_contact %>
+  <%= f.input :mail_resultat %>
+  <%= f.input :amv %>
+  <%= f.button :submit %>
+<% end %>
